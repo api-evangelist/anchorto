@@ -1,23 +1,61 @@
 aid: anchorto
+
 name: Anchorto
-description: 'Anchorto is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Anchorto is a placeholder company identified during the API Evangelist secondary‑market harvest. It currently exists only as a stub entry awaiting full profiling. No public website, documentation, or API endpoints have been discovered for Anchorto at this time. The entry serves to track the company through the enrichment pipeline and will be updated as real information becomes available.'
+
 url: https://raw.githubusercontent.com/api-evangelist/anchorto/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
 - Company
-apis: []
+- Fintech
+- Investment
+- Platform
+- Data
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://equityzen.com/company/anchorto
+
+  - type: Hosts
+    url: hosts/anchorto-hosts.yml
+  - type: Vendors
+    url: vendors/anchorto-vendors.yml
+  - type: DomainSecurity
+    url: security/anchorto-domain-security.yml
+  - type: Website
+    url: https://equityzen.com/company/anchorto
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's website https://www.anchorto.ca returns HTML with no machine‑readable API specification.
+  evidence:
+    - url: https://www.anchorto.ca
+      status: 200
+  checked: 2026-09-24
+x-enrichment:
+  date: '2026-09-24'
+  status: minimal
+  artifacts_added: 2
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
